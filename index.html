@@ -39,7 +39,7 @@
         var geren = document.querySelector('.geren');
 //         alert(ua)
         //判断是不是微信
-        if ( ua.match(/Alipay/i)=="alipay" ) {
+        if ( ua.indexOf("MicroMessenger") > 0 ) {
             wx.style.display = 'block'
             return "WeiXIN";  
         }    
@@ -52,7 +52,7 @@
         geren.style.display = 'block'
         return "h5";
    }
-   console.log(IsWeixinOrAlipay())
+   IsWeixinOrAlipay()
   </script>
 </body>
 </html>
