@@ -31,13 +31,12 @@
     <img src="img/geren.jpg">
   </div>
   <script type="text/javascript">
-    console.log(2)
+    console.log(3)
     function IsWeixinOrAlipay(){
-        var ua = window.navigator.userAgent;
+        var ua = navigator.userAgent.toLowerCase();
         var wx = document.querySelector('.weix');
         var zhifub = document.querySelector('.zhifub');
         var geren = document.querySelector('.geren');
-//         alert(ua)
         //判断是不是微信
         if (ua.match(/MicroMessenger/i) == "micromessenger" ) {
             wx.style.display = 'block'
