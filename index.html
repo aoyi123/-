@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title></title>
+   <style type="text/css">
+     .weix{
+     	display: none;
+     }
+     .zhifub{
+     	display: none;
+     }
+     .geren{
+     	display: none;
+     }
+     img{
+     	width: 100%;
+     	height: 100%;
+     	display: block;
+     	line-height: 0;
+     }
+   </style>
+</head>
+<body>
+  <div class="weix">
+    <img src="/img/weix.jpg">
+  </div>
+  <div class="zhifub">
+    <img src="/img/zhifub.jpg"></div>
+  <div class="geren">
+    <img src="/img/geren.jpg">
+  </div>
+  <script type="text/javascript">
+    
+    function IsWeixinOrAlipay(){
+        var ua = window.navigator.userAgent;
+        var wx = document.querySelector('.weix');
+        var zhifub = document.querySelector('.zhifub');
+        var geren = document.querySelector('.geren');
+        alert(ua)
+        //判断是不是微信
+        if ( ua.match(/Alipay/i)=="alipay" ) {
+            wx.style.display = 'block'
+            return "WeiXIN";  
+        }    
+        //判断是不是支付宝
+        if (ua.indexOf("Alipayclient") > 0) {
+        	zhifub.style.display = 'block'
+            return "Alipay";  
+        }
+        //哪个都不是
+        geren.style.display = 'block'
+        return "h5";
+   }
+   console.log(IsWeixinOrAlipay())
+  </script>
+</body>
+</html>
