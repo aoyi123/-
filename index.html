@@ -39,12 +39,12 @@
         var geren = document.querySelector('.geren');
 //         alert(ua)
         //判断是不是微信
-        if ( ua.indexOf("MicroMessenger") > 0 ) {
+        if (ua.match(/MicroMessenger/i) == "micromessenger" ) {
             wx.style.display = 'block'
             return "WeiXIN";  
         }    
         //判断是不是支付宝
-        if (ua.indexOf("Alipayclient") > 0) {
+        if (ua.match(/AlipayClient/i) == "alipayclient") {
         	zhifub.style.display = 'block'
             return "Alipay";  
         }
